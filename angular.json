@@ -11,21 +11,30 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/boyz-ui",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -41,16 +50,12 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
-              "optimization": true,
-              "sourceMap": false,
-              "namedChunks": false
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
-              "outputHashing": "none",
-              "sourceMap": true,
-              "namedChunks": true
+              "extractLicenses": false,
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -59,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "boyz-ui:build:production"
+              "buildTarget": "boyz-ui:build:production"
             },
             "development": {
-              "browserTarget": "boyz-ui:build:development"
+              "buildTarget": "boyz-ui:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,8 +84,10 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
               "src/styles.css"
