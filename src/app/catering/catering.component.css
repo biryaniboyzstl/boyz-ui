@@ -1,0 +1,27 @@
+.catering-hero {
+  background: url('/assets/catering-hero.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catering-hero .container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.list-group-item {
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+.list-group-numbered > .list-group-item::before {
+  background-color: #007bff;
+  color: white;
+}

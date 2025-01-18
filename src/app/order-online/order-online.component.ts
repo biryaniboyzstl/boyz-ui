@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-order-online',
-  imports: [],
+  standalone: true,
   templateUrl: './order-online.component.html',
-  styleUrl: './order-online.component.css'
+  styleUrls: ['./order-online.component.css'],
 })
-export class OrderOnlineComponent {
+export class OrderOnlineComponent {}
 
-}
