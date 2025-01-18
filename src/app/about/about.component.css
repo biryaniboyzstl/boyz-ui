@@ -1,0 +1,48 @@
+.about-hero {
+  background: url('/assets/hero.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero .container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text-primary {
+  color: #007bff !important;
+}
+
+.text-success {
+  color: #28a745 !important;
+}
+
+.list-unstyled li {
+  font-size: 1.1rem;
+}
+
+.about-footer {
+  background-color: #007bff;
+  padding: 40px 20px;
+}
+
+.about-footer h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-footer p {
+  font-size: 1.2rem;
+}
+
+.about-footer .btn {
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.about-footer .btn:hover {
+  transform: scale(1.05);
+}
