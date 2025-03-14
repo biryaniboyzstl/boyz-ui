@@ -30,3 +30,8 @@
   color: #0047AB; /* Royal Blue */
   font-weight: bold;
 }
+
+.highlight-time {
+  color: #DC143C; /* Crimson Red */
+  font-weight: bold;
+}
