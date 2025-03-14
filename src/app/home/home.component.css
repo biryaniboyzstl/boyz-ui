@@ -1,4 +1,32 @@
-.carousel-item img {
-  height: 400px;
-  object-fit: cover;
+.img-fluid {
+  border: 3px solid #ffc107;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.text-danger {
+  color: #dc3545 !important;
+}
+.text-primary {
+  color: #007bff !important;
+}
+.text-warning {
+  color: #ffc107 !important;
+}
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #ffffff;
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+.highlight-gold {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.highlight-blue {
+  color: #0047AB; /* Royal Blue */
+  font-weight: bold;
 }
