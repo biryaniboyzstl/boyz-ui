@@ -1,62 +1,42 @@
-<div class="menu-hero">
-  <div class="container text-center text-white">
-    <h1>Our Menu</h1>
-    <p>Explore the authentic flavors of South India!</p>
-  </div>
-</div>
+<div class="menu">
+  <div *ngFor="let category of menu" class="category">
+    <!-- Category header: clickable to toggle expansion -->
+    <h2 class="category-header" (click)="category.expanded = !category.expanded">
+      {{ category.category }}
+      <span class="toggle-icon">{{ category.expanded ? '−' : '+' }}</span>
+    </h2>
 
-<div class="container py-5">
-  <h2 class="text-center text-primary mb-4">Explore Our Dishes</h2>
-
-  <!-- Appetizers Section -->
-  <div class="menu-category">
-    <h3 class="text-secondary">Appetizers</h3>
-    <div class="row">
-      <div class="col-md-4" *ngFor="let item of appetizers">
-        <div class="card shadow-sm">
-          <img [src]="item.image" [alt]="item.name" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{ item.name }}</h5>
-            <p class="card-text">{{ item.description }}</p>
-            <p class="text-primary fw-bold">Price: ${{ item.price }}</p>
-          </div>
+    <!-- Show category items if expanded -->
+    <div *ngIf="category.expanded">
+      <!-- Direct items under the category -->
+      <div *ngIf="category.items && category.items.length > 0">
+        <div *ngFor="let item of category.items" class="menu-item">
+          <h4>{{ item.name }} - {{ item.price }}</h4>
+          <p>
+            {{ item.description }} <span class="item-type">({{ item.type }})</span>
+          </p>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Main Course Section -->
-  <div class="menu-category mt-5">
-    <h3 class="text-secondary">Main Course</h3>
-    <div class="row">
-      <div class="col-md-4" *ngFor="let item of mainCourses">
-        <div class="card shadow-sm">
-          <img [src]="item.image" [alt]="item.name" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{ item.name }}</h5>
-            <p class="card-text">{{ item.description }}</p>
-            <p class="text-primary fw-bold">Price: ${{ item.price }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Desserts Section -->
-  <div class="menu-category mt-5">
-    <h3 class="text-secondary">Desserts</h3>
-    <div class="row">
-      <div class="col-md-4" *ngFor="let item of desserts">
-        <div class="card shadow-sm">
-          <img [src]="item.image" [alt]="item.name" class="card-img-top">
-          <div class="card-body">
-            <h5 class="card-title">{{ item.name }}</h5>
-            <p class="card-text">{{ item.description }}</p>
-            <p class="text-primary fw-bold">Price: ${{ item.price }}</p>
+      <!-- Subcategories (if any) -->
+      <div *ngIf="category.subcategories && category.subcategories.length > 0">
+        <div *ngFor="let sub of category.subcategories" class="subcategory">
+          <h3 class="subcategory-header" (click)="sub.expanded = !sub.expanded">
+            {{ sub.subcategory }}
+            <span class="toggle-icon">{{ sub.expanded ? '−' : '+' }}</span>
+          </h3>
+          <!-- Optional note -->
+          <p *ngIf="sub.note" class="sub-note">{{ sub.note }}</p>
+          <div *ngIf="sub.expanded">
+            <div *ngFor="let item of sub.items" class="menu-item">
+              <h4>{{ item.name }} - {{ item.price }}</h4>
+              <p>
+                {{ item.description }} <span class="item-type">({{ item.type }})</span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
