@@ -1,0 +1,80 @@
+.footer-section {
+  background: #333;         /* Dark background */
+  color: #fff;              /* Light text */
+  padding: 40px 20px;
+  text-align: center;       /* Center text by default */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Space columns around to center them */
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 400px;
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: left;         /* Default left text alignment */
+}
+
+.hours-col h3,
+.location-col h3 {
+  font-size: 1.5rem;
+  color: #ffc107;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Specifically center the location column text */
+.location-col {
+  text-align: center;
+}
+
+.hours-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  table-layout: auto;
+}
+
+.hours-table th,
+.hours-table td {
+  padding: 8px 12px;
+  font-size: 1rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid #444;
+  white-space: nowrap;
+}
+
+.hours-table th {
+  color: #ffc107;
+  font-weight: normal;
+}
+
+.hours-table td {
+  color: #fff;
+}
+
+/* Time slot & separator spacing */
+.time-slot {
+  margin: 0 10px;
+}
+
+.time-separator {
+  margin: 0 10px;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+}
