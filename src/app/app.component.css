@@ -1,39 +1,50 @@
 .footer-section {
-  background: #333;         /* Dark background */
-  color: #fff;              /* Light text */
+  background: #333;  /* Dark background */
+  color: #fff;
   padding: 40px 20px;
-  text-align: center;       /* Center text by default */
+  text-align: center;
 }
 
 .footer-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;  /* Three columns; middle expands */
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; /* Space columns around to center them */
-  gap: 40px;
 }
 
+/* Column defaults */
 .footer-column {
-  flex: 1 1 400px;
-  min-width: 300px;
   margin: 0 auto;
-  text-align: left;         /* Default left text alignment */
 }
 
-.hours-col h3,
-.location-col h3 {
+/* Hours Column */
+.hours-col {
+  min-width: 250px;  /* Enough space for the table */
+  text-align: left;
+}
+
+/* Location Column (center) */
+.location-col {
+  min-width: 250px;
+  text-align: center;  /* Center the location text */
+}
+
+/* Contact Column (right) */
+.contact-col {
+  min-width: 200px;
+  text-align: right;
+}
+
+/* Headings for all columns */
+.footer-column h3 {
   font-size: 1.5rem;
-  color: #ffc107;
+  color: #ffc107;  /* Gold accent */
   margin-bottom: 15px;
   text-align: center;
 }
 
-/* Specifically center the location column text */
-.location-col {
-  text-align: center;
-}
-
+/* Hours Table */
 .hours-table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -46,22 +57,23 @@
 .hours-table td {
   padding: 8px 12px;
   font-size: 1rem;
-  text-align: left;
   vertical-align: middle;
   border-bottom: 1px solid #444;
-  white-space: nowrap;
+  white-space: nowrap;  /* Prevent line wrapping */
 }
 
 .hours-table th {
   color: #ffc107;
   font-weight: normal;
+  text-align: left;
 }
 
 .hours-table td {
   color: #fff;
+  text-align: left;
 }
 
-/* Time slot & separator spacing */
+/* Time slots and separators */
 .time-slot {
   margin: 0 10px;
 }
@@ -72,6 +84,31 @@
   font-weight: bold;
 }
 
+/* Phone number link */
+.phone-number {
+  font-size: 1.2rem;
+  color: #ffc107;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.phone-number:hover {
+  color: #e0a800;
+}
+
+/* WhatsApp number link */
+.whatsapp-number {
+  font-size: 1.2rem;
+  color: #25d366;  /* WhatsApp green */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.whatsapp-number:hover {
+  color: #1ebe57;
+}
+
+/* Footer Copy */
 .footer-copy {
   margin-top: 30px;
   font-size: 0.9rem;
