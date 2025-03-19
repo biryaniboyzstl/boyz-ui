@@ -157,12 +157,6 @@
               "price": "$14.99 | $18.99 | $16.99",
               "description": "A dry, spicy South Indian fry of chicken, shrimp, or tilapia fish, bursting with the bold flavors of black pepper and curry leaves.",
               "type": "Non-Veg"
-            },
-            {
-              "name": "Egg Pepper Fry",
-              "price": "$14.99",
-              "description": "Hard-boiled eggs stir-fried with crushed black pepper, curry leaves, and house-special spices.",
-              "type": "Non-Veg"
             }
           ]
         }
@@ -171,12 +165,7 @@
     {
       "category": "BONE-IN SPECIALS",
       "items": [
-        {
-          "name": "Andhra Chicken Fry",
-          "price": "$14.99",
-          "description": "A spicy, pan-fried chicken dish coated in traditional Andhra-style red chili masala.",
-          "type": "Non-Veg"
-        },
+
         {
           "name": "Palnadu Kaaram Kodi",
           "price": "$14.99",
