@@ -1,4 +1,10 @@
 <div class="menu">
+  <!-- Announcement for Today’s Buffet -->
+  <div class="announcement">
+    <h2>Today's Lunch & Dinner Buffet</h2>
+    <p>Special Opening Price: $12.99 Buffet</p>
+  </div>
+
   <div *ngFor="let category of menu" class="category">
     <!-- Category header: clickable to toggle expansion -->
     <h2 class="category-header" (click)="category.expanded = !category.expanded">

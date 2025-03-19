@@ -1,3 +1,23 @@
+/* Announcement Styles */
+.announcement {
+  background: #ffc107;  /* Gold background */
+  color: #333;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.announcement h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.announcement p {
+  font-size: 1.2rem;
+  margin: 5px 0 0;
+}
+
 /* Overall menu container: using grid for responsive two-column layout */
 .menu {
   display: grid;
@@ -81,3 +101,22 @@
   color: #777;
   margin: 5px 0 10px;
 }
+
+/* Time slots and separators in hours table */
+.time-slot {
+  margin: 0 10px;
+}
+
+.time-separator {
+  margin: 0 10px;
+  color: #ffc107;
+  font-weight: bold;
+}
+
+/* Hours Table */
+.hours-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  table-layout: auto;
