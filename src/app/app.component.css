@@ -115,3 +115,27 @@
   opacity: 0.8;
   text-align: center;
 }
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hours-col, .contact-col {
+    text-align: center; /* Center the text in each section */
+    min-width: auto;    /* Remove the fixed min-width */
+  }
+
+  .hours-table {
+    max-width: 100%;
+  }
+
+  .hours-table th,
+  .hours-table td {
+    white-space: normal; /* Allow text to wrap */
+    font-size: 0.9rem;   /* Slightly reduce font-size if needed */
+  }
+}
+
