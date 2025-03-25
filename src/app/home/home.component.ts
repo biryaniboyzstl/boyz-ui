@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+   buffetPrice!: number;
 
+  ngOnInit(): void {
+    const today = new Date();
+    const day = today.getDay(); // 0 = Sunday, 6 = Saturday
+    // Weekends (Saturday=6, Sunday=0) use $20.99; Weekdays use $15.99
+    this.buffetPrice = (day === 0 || day === 6) ? 20.99 : 15.99;
+  }
 }
