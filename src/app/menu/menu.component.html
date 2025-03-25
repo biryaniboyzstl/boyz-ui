@@ -1,8 +1,13 @@
 <div class="menu">
+  <!-- Soft Launch Note -->
+  <div class="soft-launch-note">
+    <p>We are on soft launch and have limited menu, we will be opening our menu soon. Thank you for your continuous support.</p>
+  </div>
+
   <!-- Announcement for Next Few Days Buffet -->
   <div class="announcement">
     <h2>"We're offering an exclusive lunch and dinner buffet only, giving you the chance to savor a variety of delicious cuisines from our menu."</h2>
-      <span *ngIf="buffetPrice === 20.99">(Grand Buffet)</span>
+    <span *ngIf="buffetPrice === 20.99">(Grand Buffet)</span>
     Buffet Price: ${{ buffetPrice }}
   </div>
 
