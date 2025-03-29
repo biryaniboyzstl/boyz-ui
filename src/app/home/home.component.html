@@ -1,11 +1,13 @@
 <!-- src/app/pages/home/home.component.html -->
 <section class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-danger">"Join us over the next few days for our special soft launch! We're offering an exclusive lunch and dinner buffet only, giving you the chance to savor a variety of delicious cuisines from our menu. Don’t miss this limited-time experience!"
-    </h1>
-    <h2 class="text-danger">
-       <span *ngIf="buffetPrice === 20.99">Week End Grand </span>
-    Buffet Price: ${{ buffetPrice }}
-
+  <h1 class="display-4 fw-bold text-danger">
+    "Join us over the next few days for our special soft launch! We're offering an exclusive lunch and dinner buffet only, giving you the chance to savor a variety of delicious cuisines from our menu. Don’t miss this limited-time experience!"
+  </h1>
+  <h2 class="text-danger">
+    <span *ngIf="buffetPrice === 20.99">Week End Grand </span>
+    Adult Buffet Price: ${{ buffetPrice }}<br>
+    Kids (12 and Under): ${{ kidsPrice }}<br>
+    Kids (7 and Under): FREE
   </h2>
   <p class="lead text-muted">
     Embark on an Exquisite Indian Culinary Adventure!
@@ -34,14 +36,17 @@
   <div class="container">
     <h2 class="fw-bold">Experience Authentic Indian Cuisine</h2>
     <p class="fs-5">Join us for our soft opening and stay connected for exclusive offers and updates.</p>
-    <p class="fs-6">Location: <a href="https://www.google.com/maps/place/4401+Highway+K,+O%27Fallon,+MO+63366" target="_blank" class="text-white text-decoration-underline">4401 Highway K, O'Fallon, MO 63368</a></p>
+    <p class="fs-6">
+      Location:
+      <a href="https://www.google.com/maps/place/4401+Highway+K,+O%27Fallon,+MO+63366" target="_blank"
+         class="text-white text-decoration-underline">
+        4401 Highway K, O'Fallon, MO 63368
+      </a>
+    </p>
 
     <a href="https://www.facebook.com/profile.php?id=61569225116924" target="_blank"
        class="btn btn-warning btn-lg me-3">Facebook</a>
     <a href="https://instagram.com/biryaniboyzstl" target="_blank"
        class="btn btn-warning btn-lg">Instagram</a>
   </div>
-
 </section>
-
-
