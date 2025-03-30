@@ -1,0 +1,13 @@
+<div class="bakery-menu">
+  <h2>Bakery Menu</h2>
+  <div *ngFor="let category of bakeryMenu" class="bakery-category">
+    <h3>{{ category.category }}</h3>
+    <div *ngFor="let item of category.items" class="bakery-item">
+      <h4>{{ item.name }} - {{ item.price }}</h4>
+      <p>
+        {{ item.description }}
+        <span class="item-type">({{ item.type }})</span>
+      </p>
+    </div>
+  </div>
+</div>
