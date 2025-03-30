@@ -37,6 +37,12 @@
           "price": "$4.99",
           "description": "Fresh strawberry mousse with a silky texture and natural fruit flavor.",
           "type": "Dessert"
+        },
+        {
+          "name": "Mango Mousse",
+          "price": "$4.99",
+          "description": "Fresh mongo mousse with a silky texture and natural fruit flavor.",
+          "type": "Dessert"
         }
       ]
     }
