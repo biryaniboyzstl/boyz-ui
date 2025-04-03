@@ -13,6 +13,7 @@ export class MenuComponent {
   menu: any[] = [];
   buffetPrice!: number;
   kidsPrice!: number;
+  isWednesday: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +24,10 @@ export class MenuComponent {
     this.buffetPrice = (day === 0 || day === 6) ? 20.99 : 15.99;
     // Kids (12 and under) pay half of the adult buffet price.
     this.kidsPrice = parseFloat((this.buffetPrice / 2).toFixed(2));
+
+    this.isWednesday = (day === 3);
+
+
 
     this.http.get<any>('assets/menu.json').subscribe(data => {
       // Assuming JSON structure: { "menu": [...] }
