@@ -1,14 +1,8 @@
-<section class="bg-warning text-white text-center py-4">
-  <div class="container">
-    <h1 class="display-5 fw-bold">Snacks Are Available!</h1>
-    <p class="lead mb-0">Every day from <span class="fw-bold">4:30 PM onwards</span></p>
-    <p class="lead">
-      Veg Puff | Chicken Puff | Egg Puff | Punugulu | Old City Mirch Bajji | Aloo Samosa | Onion Pakoda
-    </p>
-  </div>
-</section>
 <section *ngIf="isWeekendDinner" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-success">Weekend Dinner Specials – From 5 PM</h1>
+  <h1 class="display-4 fw-bold text-success">
+    Weekend Dinner Specials – From 5 PM (Friday, Saturday & Sunday)
+  </h1>
+  <h2 class="fs-5 text-info">Available on Friday, Saturday, and Sunday</h2>
   <ul class="list-group list-group-flush mt-3">
     <li class="list-group-item">Hyd Chicken Dum Biryani</li>
     <li class="list-group-item">Andhra Chicken Pulao</li>
@@ -25,6 +19,7 @@
   </ul>
   <p class="mt-4 fw-bold fs-5 text-primary">Snack Counter and Pastry are also available!</p>
 </section>
+
 
 <section *nfIf="isWednesday" class="container text-center py-5">
   <h1 class="display-4 fw-bold text-danger">Biryani Night on Wednesday</h1>

@@ -1,18 +1,11 @@
 <!-- src/app/pages/home/home.component.html -->
-<!-- New Top Section: Biryani Night on Wednesday -->
-<!-- Top Banner: Snacks Are Available -->
-<section class="bg-warning text-white text-center py-4">
-  <div class="container">
-    <h1 class="display-5 fw-bold">Snacks Are Available!</h1>
-    <p class="lead mb-0">Every day from <span class="fw-bold">4:30 PM onwards</span></p>
-    <p class="lead">
-      Veg Puff | Chicken Puff | Egg Puff | Punugulu | Old City Mirch Bajji | Aloo Samosa | Onion Pakoda
-    </p>
-  </div>
-</section>
 
+<!-- Weekend Dinner Specials - Now at the Top -->
 <section *ngIf="isWeekendDinner" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-success">Weekend Dinner Specials – From 5 PM</h1>
+  <h1 class="display-4 fw-bold text-success">
+    Weekend Dinner Specials – From 5 PM (Friday, Saturday & Sunday)
+  </h1>
+  <h2 class="fs-5 text-info">Available on Friday, Saturday, and Sunday</h2>
   <ul class="list-group list-group-flush mt-3">
     <li class="list-group-item">Hyd Chicken Dum Biryani</li>
     <li class="list-group-item">Andhra Chicken Pulao</li>
@@ -31,6 +24,8 @@
 </section>
 
 
+
+<!-- Wednesday Biryani Night Section -->
 <section *ngIf="isWednesday" class="container text-center py-5">
   <h1 class="display-4 fw-bold text-danger">Biryani Night on Wednesday</h1>
   <h2 class="text-danger">
@@ -54,7 +49,7 @@
   </div>
 </section>
 
-
+<!-- Soft Launch Section -->
 <section class="container text-center py-5">
   <h1 class="display-4 fw-bold text-danger">
     "Join us over the next few days for our special soft launch! We're offering an exclusive lunch and dinner buffet only, giving you the chance to savor a variety of delicious cuisines from our menu. Don’t miss this limited-time experience!"
