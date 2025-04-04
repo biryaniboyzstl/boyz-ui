@@ -3,47 +3,24 @@
     {
       "category": "Cakes",
       "items": [
-        {
-          "name": "Chocolate Cake",
-          "price": "$5.99",
-          "description": "Rich and moist chocolate cake with creamy chocolate frosting.",
-          "type": "Dessert"
-        },
-        {
-          "name": "Vanilla Cake",
-          "price": "$5.49",
-          "description": "Classic vanilla cake layered with smooth buttercream frosting.",
-          "type": "Dessert"
-        },
-        {
-          "name": "Red Velvet Cake",
-          "price": "$6.49",
-          "description": "Velvety red cake with a hint of cocoa and tangy cream cheese frosting.",
-          "type": "Dessert"
-        }
+        { "name": "Black Forest", "price": "$3.49", "description": "Classic German chocolate cake with layers of whipped cream and cherries.", "type": "Dessert" },
+        { "name": "Double Chocolate", "price": "$3.99", "description": "Rich and dense chocolate cake with double layers of chocolate ganache.", "type": "Dessert" },
+        { "name": "Mango", "price": "$3.49", "description": "Soft sponge cake with mango flavor and light mango cream.", "type": "Dessert" },
+        { "name": "Chocolate Mousse", "price": "$3.49", "description": "Smooth chocolate mousse layered in a soft sponge base.", "type": "Dessert" },
+        { "name": "Butterscotch", "price": "$3.49", "description": "Moist sponge cake with creamy butterscotch icing.", "type": "Dessert" },
+        { "name": "Strawberry", "price": "$3.49", "description": "Strawberry flavored cake topped with fresh cream and strawberry glaze.", "type": "Dessert" },
+        { "name": "Ras Malai", "price": "$3.99", "description": "Fusion cake inspired by the Indian dessert Ras Malai with milk syrup and cream.", "type": "Dessert" },
+        { "name": "Pistachio", "price": "$3.49", "description": "Light pistachio flavored cake topped with crushed pistachios and chocolate ganache.", "type": "Dessert" },
+        { "name": "Bun Butter Jam", "price": "$3.49", "description": "Soft bun filled with classic butter and sweet jam.", "type": "Snack" },
+        { "name": "Bun Masks", "price": "$2.99", "description": "Savory buns shaped in fun forms with a light filling.", "type": "Snack" },
+        { "name": "Butterscotch 1LB", "price": "$18.99", "description": "One pound of delicious butterscotch cake, perfect for celebrations.", "type": "Dessert" }
       ]
     },
     {
-      "category": "Mousses",
+      "category": "Butter Salt Cookies",
       "items": [
-        {
-          "name": "Chocolate Mousse",
-          "price": "$4.99",
-          "description": "Light and airy chocolate mousse topped with a dollop of whipped cream.",
-          "type": "Dessert"
-        },
-        {
-          "name": "Strawberry Mousse",
-          "price": "$4.99",
-          "description": "Fresh strawberry mousse with a silky texture and natural fruit flavor.",
-          "type": "Dessert"
-        },
-        {
-          "name": "Mango Mousse",
-          "price": "$4.99",
-          "description": "Fresh mongo mousse with a silky texture and natural fruit flavor.",
-          "type": "Dessert"
-        }
+        { "name": "Small pack", "price": "$5.99", "description": "A small pack of crispy butter cookies with a hint of salt.", "type": "Snack" },
+        { "name": "Big pack", "price": "$9.99", "description": "A big pack of our signature butter salt cookies perfect for sharing.", "type": "Snack" }
       ]
     }
   ]

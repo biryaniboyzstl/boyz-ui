@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   buffetPrice!: number;
   kidsPrice!: number;
   isWednesday: boolean = false;
+  isWeekendDinner: boolean = false;
+
 
   ngOnInit(): void {
     const today = new Date();
@@ -21,5 +23,7 @@ export class HomeComponent implements OnInit {
     // Kids (12 and under) pay half of the adult price.
     this.kidsPrice = parseFloat((this.buffetPrice / 2).toFixed(2));
     this.isWednesday = (day === 3);
+    this.isWeekendDinner = (day === 5 || day === 6 || day === 0); // Friday=5, Saturday=6, Sunday=0
+
   }
 }
