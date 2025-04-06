@@ -1,0 +1,82 @@
+{
+  "menu": [
+    {
+      "category": "WEEKEND DINNER SPECIALS",
+      "note": "Available on Friday, Saturday, and Sunday from 5 PM",
+      "items": [
+        {
+          "name": "Hyd Chicken Dum Biryani",
+          "price": "$12.99",
+          "description": "Traditional dum-cooked chicken biryani with authentic Hyderabadi spices.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Andhra Chicken Pulao",
+          "price": "",
+          "description": "",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Hyd Veg Dum Biryani",
+          "price": "$11.99",
+          "description": "Fragrant basmati rice slow-cooked with aromatic spices and fresh vegetables.",
+          "type": "Veg"
+        },
+        {
+          "name": "Bejawada Boneless Chicken Biryani",
+          "price": "$13.99",
+          "description": "Tender boneless chicken marinated and cooked to perfection in fragrant rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Paneer Biryani",
+          "price": "$12.99",
+          "description": "Fragrant dum biryani with marinated paneer cubes and rich spices.",
+          "type": "Veg"
+        },
+        {
+          "name": "Egg Biryani",
+          "price": "$11.99",
+          "description": "Classic Hyderabadi dum biryani infused with rich flavors and boiled eggs.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Goat Paya with Paratha",
+          "price": "",
+          "description": "",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Fish 65",
+          "price": "",
+          "description": "",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Thalapakatti Goat Biryani",
+          "price": "",
+          "description": "",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Guntur Boneless Chicken Curry",
+          "price": "",
+          "description": "",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "BB Goat Curry",
+          "price": "",
+          "description": "",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Naan, Butter Naan, Garlic Naan",
+          "price": "",
+          "description": "",
+          "type": "Veg"
+        }
+      ]
+    }
+  ]
+}
