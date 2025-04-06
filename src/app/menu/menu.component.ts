@@ -31,7 +31,7 @@ export class MenuComponent {
 
 
 
-    this.http.get<any>('assets/menu.json').subscribe(data => {
+    this.http.get<any>('assets/weekend.json').subscribe(data => {
       // Assuming JSON structure: { "menu": [...] }
       this.menu = data.menu;
 

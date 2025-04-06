@@ -1,67 +1,8 @@
-<section *ngIf="isWeekendDinner" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-success">
-    Weekend Dinner Specials – From 5 PM (Friday, Saturday & Sunday)
-  </h1>
-  <h2 class="fs-5 text-info">Available on Friday, Saturday, and Sunday</h2>
-  <ul class="list-group list-group-flush mt-3">
-    <li class="list-group-item">Hyd Chicken Dum Biryani</li>
-    <li class="list-group-item">Andhra Chicken Pulao</li>
-    <li class="list-group-item">Hyd Veg Dum Biryani</li>
-    <li class="list-group-item">Bejawada Boneless Chicken Biryani</li>
-    <li class="list-group-item">Paneer Biryani</li>
-    <li class="list-group-item">Egg Biryani</li>
-    <li class="list-group-item">Goat Paya with Paratha</li>
-    <li class="list-group-item">Fish 65</li>
-    <li class="list-group-item">Thalapakatti Goat Biryani</li>
-    <li class="list-group-item">Guntur Boneless Chicken Curry</li>
-    <li class="list-group-item">BB Goat Curry</li>
-    <li class="list-group-item">Naan, Butter Naan, Garlic Naan</li>
-  </ul>
-  <p class="mt-4 fw-bold fs-5 text-primary">Snack Counter and Pastry are also available!</p>
-</section>
 
 
-<section *nfIf="isWednesday" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-danger">Biryani Night on Wednesday</h1>
-  <h2 class="text-danger">
-    Veg Biryani: $9.99<br>
-    Paneer or Chicken Biryani: $10.99
-  </h2>
-  <div class="mt-4">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Hyd Chicken Dum Biryani</li>
-      <li class="list-group-item">Hyd Vegetable Dum Biryani</li>
-      <li class="list-group-item">Chicken Roast Biryani - Pulao</li>
-      <li class="list-group-item">Vijayawada Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Pachi Mirchi  Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Pandu Mirchi  Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Gongura  Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Paneer Biryani - Pulao</li>
-      <li class="list-group-item">Pachimirchi Paneer Biryani - Pulao</li>
-      <li class="list-group-item">Egg Biryani</li>
-      <li class="list-group-item">Shrimp Biryani</li>
-    </ul>
-  </div>
-</section>
 <div class="menu">
   <!-- Soft Launch Note -->
-  <div class="soft-launch-note">
-    <p>
-      We are on soft launch and have limited menu, we will be opening our menu soon.
-      Thank you for your continuous support.
-    </p>
-  </div>
 
-  <!-- Announcement for Buffet -->
-  <div class="announcement">
-    <h2>
-      "We're offering an exclusive lunch and dinner buffet only, giving you the chance
-      to savor a variety of delicious cuisines from our menu."
-    </h2>
-    <div>Adult Buffet Price: ${{ buffetPrice }}</div>
-    <div>Kids (12 and Under): ${{ kidsPrice }}</div>
-    <div>Kids (7 and Under): FREE</div>
-  </div>
 
   <div *ngFor="let category of menu" class="category">
     <!-- Category header: clickable to toggle expansion -->

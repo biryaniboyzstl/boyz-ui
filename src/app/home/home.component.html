@@ -1,26 +1,21 @@
-<!-- src/app/pages/home/home.component.html -->
+<!-- Top Banner Update -->
+<section class="bg-info text-white text-center py-4">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Limited Dinner Menu Now Available!</h1>
+    <p class="lead">Please visit our Menu section to explore our dinner specials.</p>
+    <h2 class="display-6">Lunch and Dinner Buffet Available!</h2>
+  </div>
+</section>
 
-<!-- Weekend Dinner Specials - Now at the Top -->
-<section *ngIf="isWeekendDinner" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-success">
-    Weekend Dinner Specials – From 5 PM (Friday, Saturday & Sunday)
-  </h1>
-  <h2 class="fs-5 text-info">Available on Friday, Saturday, and Sunday</h2>
-  <ul class="list-group list-group-flush mt-3">
-    <li class="list-group-item">Hyd Chicken Dum Biryani</li>
-    <li class="list-group-item">Andhra Chicken Pulao</li>
-    <li class="list-group-item">Hyd Veg Dum Biryani</li>
-    <li class="list-group-item">Bejawada Boneless Chicken Biryani</li>
-    <li class="list-group-item">Paneer Biryani</li>
-    <li class="list-group-item">Egg Biryani</li>
-    <li class="list-group-item">Goat Paya with Paratha</li>
-    <li class="list-group-item">Fish 65</li>
-    <li class="list-group-item">Thalapakatti Goat Biryani</li>
-    <li class="list-group-item">Guntur Boneless Chicken Curry</li>
-    <li class="list-group-item">BB Goat Curry</li>
-    <li class="list-group-item">Naan, Butter Naan, Garlic Naan</li>
-  </ul>
-  <p class="mt-4 fw-bold fs-5 text-primary">Snack Counter and Pastry are also available!</p>
+<!-- Snacks Section -->
+<section class="bg-warning text-white text-center py-4">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Snacks Are Available!</h1>
+    <p class="lead mb-0">Every day from <span class="fw-bold">4:30 PM onwards</span></p>
+    <p class="lead">
+      Veg Puff | Chicken Puff | Egg Puff | Punugulu | Old City Mirch Bajji | Aloo Samosa | Onion Pakoda
+    </p>
+  </div>
 </section>
 
 
@@ -51,11 +46,9 @@
 
 <!-- Soft Launch Section -->
 <section class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-danger">
-    "Join us over the next few days for our special soft launch! We're offering an exclusive lunch and dinner buffet only, giving you the chance to savor a variety of delicious cuisines from our menu. Don’t miss this limited-time experience!"
-  </h1>
+
   <h2 class="text-danger">
-    <span *ngIf="buffetPrice === 20.99">Ugadi Special </span>
+    <span *ngIf="buffetPrice === 20.99">Weekend Special </span>
     Adult Buffet Price: ${{ buffetPrice }}<br>
     Kids (12 and Under): ${{ kidsPrice }}<br>
     Kids (7 and Under): FREE
@@ -65,7 +58,7 @@
   </p>
 
   <div class="my-5">
-    <img src="assets/saturday.jpeg" alt="Soft Opening Announcement"
+    <img src="assets/sunday.jpeg" alt="Soft Opening Announcement"
          class="img-fluid rounded shadow-lg border border-warning"
          style="max-width: 80%;">
   </div>
