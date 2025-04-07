@@ -1,19 +1,27 @@
+<section class="bg-warning text-white text-center py-4">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Snacks Are Available!</h1>
+    <p class="lead mb-0">Every day from <span class="fw-bold">4:30 PM onwards</span></p>
+    <p class="lead">
+      Veg Puff | Chicken Puff | Egg Puff | Punugulu | Old City Mirch Bajji | Aloo Samosa | Onion Pakoda
+    </p>
+  </div>
+</section>
 
-
-<div class="menu">
-  <!-- Soft Launch Note -->
+<!--<div class="menu">
+  &lt;!&ndash; Soft Launch Note &ndash;&gt;
 
 
   <div *ngFor="let category of menu" class="category">
-    <!-- Category header: clickable to toggle expansion -->
+    &lt;!&ndash; Category header: clickable to toggle expansion &ndash;&gt;
     <h2 class="category-header" (click)="category.expanded = !category.expanded">
       {{ category.category }}
       <span class="toggle-icon">{{ category.expanded ? '−' : '+' }}</span>
     </h2>
 
-    <!-- Show category items if expanded -->
+    &lt;!&ndash; Show category items if expanded &ndash;&gt;
     <div *ngIf="category.expanded">
-      <!-- Direct items under the category -->
+      &lt;!&ndash; Direct items under the category &ndash;&gt;
       <div *ngIf="category.items && category.items.length > 0">
         <div *ngFor="let item of category.items" class="menu-item">
           <h4>{{ item.name }} - {{ item.price }}</h4>
@@ -23,14 +31,14 @@
         </div>
       </div>
 
-      <!-- Subcategories (if any) -->
+      &lt;!&ndash; Subcategories (if any) &ndash;&gt;
       <div *ngIf="category.subcategories && category.subcategories.length > 0">
         <div *ngFor="let sub of category.subcategories" class="subcategory">
           <h3 class="subcategory-header" (click)="sub.expanded = !sub.expanded">
             {{ sub.subcategory }}
             <span class="toggle-icon">{{ sub.expanded ? '−' : '+' }}</span>
           </h3>
-          <!-- Optional note -->
+          &lt;!&ndash; Optional note &ndash;&gt;
           <p *ngIf="sub.note" class="sub-note">{{ sub.note }}</p>
           <div *ngIf="sub.expanded">
             <div *ngFor="let item of sub.items" class="menu-item">
@@ -44,4 +52,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
