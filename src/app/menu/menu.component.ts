@@ -31,16 +31,16 @@ export class MenuComponent {
 
 
 
-    this.http.get<any>('assets/weekend.json').subscribe(data => {
+    this.http.get<any>('assets/wednesday.json').subscribe(data => {
       // Assuming JSON structure: { "menu": [...] }
       this.menu = data.menu;
 
       // Add an expanded property to each category and subcategory for toggle functionality.
       this.menu.forEach((category: any) => {
-        category.expanded = false;
+        category.expanded = true;
         if (category.subcategories) {
           category.subcategories.forEach((sub: any) => {
-            sub.expanded = false;
+            sub.expanded = true;
           });
         }
       });

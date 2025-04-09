@@ -1,72 +1,61 @@
-
-
-<!-- Snacks Section -->
-<section class="bg-warning text-white text-center py-4">
+<!-- Wednesday Specials: Buffet & Take-Out -->
+<section class="bg-dark text-white py-5">
   <div class="container">
-    <h1 class="display-5 fw-bold">Snacks Are Available!</h1>
-    <p class="lead mb-0">Every day from <span class="fw-bold">4:30 PM onwards</span></p>
-    <p class="lead">
-      Veg Puff | Chicken Puff | Egg Puff | Punugulu | Old City Mirch Bajji | Aloo Samosa | Onion Pakoda
-    </p>
+    <h1 class="display-4 fw-bold text-center">Wednesday Specials</h1>
+    <div class="row mt-4">
+
+      <!-- Dinner Buffet Section -->
+      <div class="col-md-6">
+        <div class="text-center">
+          <img src="assets/biryani_buffet.jpeg" alt="Dinner Buffet" class="img-fluid rounded shadow-lg mb-3">
+        </div>
+        <h3 class="fw-bold">Dinner Buffet</h3>
+        <p class="fs-4">4:30 PM – 9:30 PM</p>
+        <ul class="list-unstyled fs-5">
+          <li>Adults: $21.99</li>
+          <li>Kids (12 and Under): $10.99</li>
+          <li>Kids (7 and Under): <strong>FREE</strong></li>
+        </ul>
+        <p class="fs-5">
+          Enjoy a lavish spread of Veg &amp; Non-Veg Appetizers, Curries, Biryani &amp; Pulao, Indian Salads,
+          Fresh Breads, Desserts, and more.
+        </p>
+      </div>
+
+      <!-- Special Take-Out Biryani Section -->
+      <div class="col-md-6">
+        <div class="text-center">
+          <img src="assets/wednesday_biryani.jpeg" alt="Special Take-Out Biryani" class="img-fluid rounded shadow-lg mb-3">
+        </div>
+        <h3 class="fw-bold">Special Take-Out Biryani</h3>
+        <p class="fs-4">5:00 PM – 9:30 PM</p>
+        <ul class="list-unstyled fs-5">
+          <li>Veg Biryani: $9.99</li>
+          <li>Phool Makhana / Jack Fruit / Paneer / Chicken Biryani: $10.99</li>
+        </ul>
+        <p class="fs-5">
+          Indulge in exotic flavors including Jack Fruit Biryani, Egg Biryani, Pachi Mirchi Boneless,
+          Vijayawada Boneless, Chicken Dum Biryani, Chicken Keema Pulao, Yakhni Goat Paya, and Goat Paya with Paratha!
+        </p>
+      </div>
+    </div>
+
+    <!-- Order & Location Info -->
+    <div class="text-center mt-4">
+      <p class="fs-5">
+        Come experience authentic Indian flavors—dine in or take out at
+        <strong>4401 State Hwy K, O’Fallon, MO 63366</strong>.
+      </p>
+      <p class="fs-5">
+        Call <strong>(636) 477-6077 &nbsp; | &nbsp;  (636) 681-3189 </strong> to place your order.
+      </p>
+      <p class="fs-4 fw-bold">Come Hungry, Leave Happy!</p>
+    </div>
   </div>
 </section>
 
 
 
-<!-- Wednesday Biryani Night Section -->
-<section *ngIf="isWednesday" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-danger">Biryani Night on Wednesday</h1>
-  <h2 class="text-danger">
-    Veg Biryani: $9.99<br>
-    Paneer or Chicken Biryani: $10.99
-  </h2>
-  <div class="mt-4">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Hyd Chicken Dum Biryani</li>
-      <li class="list-group-item">Hyd Vegetable Dum Biryani</li>
-      <li class="list-group-item">Chicken Roast Biryani - Pulao</li>
-      <li class="list-group-item">Vijayawada Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Pachi Mirchi Chicken Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Pandu Mirchi Chicken Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Gongura Chicken Boneless Biryani - Pulao</li>
-      <li class="list-group-item">Paneer Biryani - Pulao</li>
-      <li class="list-group-item">Pachimirchi Paneer Biryani - Pulao</li>
-      <li class="list-group-item">Egg Biryani</li>
-      <li class="list-group-item">Shrimp Biryani</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Soft Launch Section -->
-<section class="container text-center py-5">
-
-  <h2 class="text-danger">
-    <span *ngIf="buffetPrice === 20.99">Weekend Special </span>
-    Adult Buffet Price: ${{ buffetPrice }}<br>
-    Kids (12 and Under): ${{ kidsPrice }}<br>
-    Kids (7 and Under): FREE
-  </h2>
-  <p class="lead text-muted">
-    Embark on an Exquisite Indian Culinary Adventure!
-  </p>
-
-  <div class="my-5">
-    <img src="assets/hero.jpg" alt="Soft Opening Announcement"
-         class="img-fluid rounded shadow-lg border border-warning"
-         style="max-width: 80%;">
-  </div>
-  <p class="fs-5">
-    St. Louis, get ready for an extraordinary journey through authentic Indian cuisine right here in your own backyard!
-    Discover the vibrant tastes of India featuring our signature Hyderabadi biryani, sizzling tandoori delicacies, and flavorful
-    curries perfectly complemented by warm, fluffy naan. Whether you're in
-    <strong>O'Fallon, Chesterfield, Maryland Heights, Wentzville, Lake St. Louis, St. Peters, St. Charles, Cottleville</strong>, or anywhere
-    across the St. Louis region, come and savor the bold spices and rich flavors that truly capture the essence of Indian culinary tradition.
-  </p>
-  <p class="fs-5 text-primary">
-    <strong>We are proud to bring this experience to O'Fallon, where our journey begins!</strong>
-    Be among the first to experience the magic of genuine Indian flavors close to home!
-  </p>
-</section>
 
 <!-- Call-to-Action -->
 <section class="bg-danger text-white text-center py-5">

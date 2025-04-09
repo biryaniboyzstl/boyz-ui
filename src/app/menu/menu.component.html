@@ -1,27 +1,28 @@
-<section class="bg-warning text-white text-center py-4">
+<!-- Phone Order Notice -->
+<section class="bg-danger text-white text-center py-3">
   <div class="container">
-    <h1 class="display-5 fw-bold">Snacks Are Available!</h1>
-    <p class="lead mb-0">Every day from <span class="fw-bold">4:30 PM onwards</span></p>
-    <p class="lead">
-      Veg Puff | Chicken Puff | Egg Puff | Punugulu | Old City Mirch Bajji | Aloo Samosa | Onion Pakoda
+    <h2 class="mb-0">📞 Place Your Orders at:</h2>
+    <p class="fs-5 fw-bold mb-0">
+      +1 636-477-6077 &nbsp; | &nbsp; +1 636-681-3189
     </p>
   </div>
 </section>
 
-<!--<div class="menu">
-  &lt;!&ndash; Soft Launch Note &ndash;&gt;
+
+<div class="menu">
+  <!-- Soft Launch Note -->
 
 
   <div *ngFor="let category of menu" class="category">
-    &lt;!&ndash; Category header: clickable to toggle expansion &ndash;&gt;
+    <!-- Category header: clickable to toggle expansion -->
     <h2 class="category-header" (click)="category.expanded = !category.expanded">
       {{ category.category }}
       <span class="toggle-icon">{{ category.expanded ? '−' : '+' }}</span>
     </h2>
 
-    &lt;!&ndash; Show category items if expanded &ndash;&gt;
+    <!-- Show category items if expanded -->
     <div *ngIf="category.expanded">
-      &lt;!&ndash; Direct items under the category &ndash;&gt;
+      <!-- Direct items under the category -->
       <div *ngIf="category.items && category.items.length > 0">
         <div *ngFor="let item of category.items" class="menu-item">
           <h4>{{ item.name }} - {{ item.price }}</h4>
@@ -31,14 +32,14 @@
         </div>
       </div>
 
-      &lt;!&ndash; Subcategories (if any) &ndash;&gt;
+      <!-- Subcategories (if any) -->
       <div *ngIf="category.subcategories && category.subcategories.length > 0">
         <div *ngFor="let sub of category.subcategories" class="subcategory">
           <h3 class="subcategory-header" (click)="sub.expanded = !sub.expanded">
             {{ sub.subcategory }}
             <span class="toggle-icon">{{ sub.expanded ? '−' : '+' }}</span>
           </h3>
-          &lt;!&ndash; Optional note &ndash;&gt;
+          <!-- Optional note -->
           <p *ngIf="sub.note" class="sub-note">{{ sub.note }}</p>
           <div *ngIf="sub.expanded">
             <div *ngFor="let item of sub.items" class="menu-item">
@@ -52,4 +53,4 @@
       </div>
     </div>
   </div>
-</div>-->
+</div>
