@@ -1,0 +1,70 @@
+{
+  "menu": [
+    {
+      "category": "WEDNESDAY BIRYANI SPECIALS",
+      "note": "Available every Wednesday from 5:00 PM to 9:30 PM",
+      "items": [
+        {
+          "name": "Veg Dum Biryani",
+          "price": "$9.99",
+          "description": "Aromatic basmati rice cooked on dum with spiced vegetables for a flavorful vegetarian classic.",
+          "type": "Veg"
+        },
+        {
+          "name": "Phool Makhana Cashew Pulao",
+          "price": "$10.99",
+          "description": "A light and nutritious pulao made with fox nuts and cashews, perfect for a healthy delight.",
+          "type": "Veg"
+        },
+        {
+          "name": "Jack Fruit Biryani",
+          "price": "$10.99",
+          "description": "Tender jackfruit chunks slow-cooked with fragrant spices for a meaty veg biryani experience.",
+          "type": "Veg"
+        },
+        {
+          "name": "Egg Biryani",
+          "price": "$10.99",
+          "description": "Boiled eggs layered with spiced rice and herbs, offering a protein-packed biryani treat.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Pachi Mirchi Boneless",
+          "price": "$10.99",
+          "description": "Fiery green chili boneless chicken biryani, packed with bold Andhra flavors.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Vijayawada Boneless",
+          "price": "$10.99",
+          "description": "Boneless chicken biryani inspired by the spicy flavors of Vijayawada.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Chicken Dum Biryani",
+          "price": "$10.99",
+          "description": "Classic Hyderabadi style chicken dum biryani, slow-cooked to perfection.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Chicken Keema Pulao",
+          "price": "$10.99",
+          "description": "Minced chicken sautéed with spices and layered into aromatic basmati rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Yakhni Goat Pulao",
+          "price": "$15.99",
+          "description": "Flavorful goat meat cooked in a spiced broth and blended with basmati rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Goat Paya With Paratha",
+          "price": "$15.99",
+          "description": "Rich and savory goat leg soup served with flaky, buttery parathas.",
+          "type": "Non-Veg"
+        }
+      ]
+    }
+  ]
+}
