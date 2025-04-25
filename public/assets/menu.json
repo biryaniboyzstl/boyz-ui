@@ -1,6 +1,133 @@
 {
   "menu": [
+     {
+      "category": "WEDNESDAY BIRYANI SPECIALS",
+      "note": "Available every Wednesday from 5:00 PM to 9:30 PM",
+      "items": [
+        {
+          "name": "Hyderabadi Vegetable Dum Biryani",
+          "price": "$9.99",
+          "description": "Aromatic basmati rice cooked on dum with spiced vegetables for a flavorful vegetarian classic.",
+          "type": "Veg"
+        },
+        {
+          "name": "Paneer Biryani",
+          "price": "$10.99",
+          "description": "Aromatic basmati rice cooked with paneer and flavored with Indian spices.",
+          "type": "Veg"
+        },
+        {
+          "name": "Pachi Mirchi Paneer Biryani",
+          "price": "$10.99",
+          "description": "Spicy paneer biryani with green chilies for an added kick.",
+          "type": "Veg"
+        },
+        {
+          "name": "BB Special Egg Biryani",
+          "price": "$10.99",
+          "description": "Boiled eggs layered with spiced rice and herbs, offering a protein-packed biryani treat.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Hyderabadi Chicken Dum Biryani",
+          "price": "$10.99",
+          "description": "Classic Hyderabadi style chicken dum biryani, slow-cooked to perfection.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Chicken Fry Biryani",
+          "price": "$10.99",
+          "description": "Fried chicken pieces cooked with biryani rice for a crispy and flavorful experience.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Chicken Keema Biryani",
+          "price": "$10.99",
+          "description": "Minced chicken sautéed with spices and layered into aromatic basmati rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Pachi Mirchi Boneless Chicken Biryani",
+          "price": "$10.99",
+          "description": "Fiery green chili boneless chicken biryani, packed with bold Andhra flavors.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Chicken 65 Biryani",
+          "price": "$10.99",
+          "description": "Spicy and crispy Chicken 65 combined with aromatic biryani rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Pondu Mirchi Boneless Chicken Biryani",
+          "price": "$10.99",
+          "description": "Boneless chicken cooked with garlic and green chili for a rich and flavorful biryani.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Vijayawada Boneless Chicken Biryani",
+          "price": "$10.99",
+          "description": "Boneless chicken biryani inspired by the spicy flavors of Vijayawada.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Shrimp Biryani",
+          "price": "$12.99",
+          "description": "Aromatic basmati rice cooked with tender shrimp and flavorful spices.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Goat Fry Biryani",
+          "price": "$14.99",
+          "description": "Spicy goat meat fried and cooked with aromatic biryani rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Pachi Mirchi Paneer Pulao",
+          "price": "$10.99",
+          "description": "Spicy pulao with paneer and green chilies for a flavorful vegetarian treat.",
+          "type": "Veg"
+        },
+        {
+          "name": "BB Special Egg Pulao",
+          "price": "$10.99",
+          "description": "Pulao made with boiled eggs and aromatic spices.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Pachi Mirchi Boneless Chicken Pulao",
+          "price": "$10.99",
+          "description": "Fiery green chili boneless chicken cooked with fragrant pulao rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Chicken Fry Pulao",
+          "price": "$10.99",
+          "description": "Fried chicken pieces cooked with flavorful pulao rice.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Shrimp Pulao",
+          "price": "$15.99",
+          "description": "Fragrant pulao rice cooked with tender shrimp and spices.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Goat Fry Pulao",
+          "price": "$17.99",
+          "description": "Spicy goat meat cooked with pulao rice for a rich and flavorful dish.",
+          "type": "Non-Veg"
+        },
+        {
+          "name": "Lamb Biryani (Boneless)",
+          "price": "$18.99",
+          "description": "Tender lamb pieces cooked with aromatic biryani rice, seasoned to perfection.",
+          "type": "Non-Veg"
+        }
+      ]
+    },
     {
+
       "category": "VEGETARIAN APPETIZERS",
       "subcategories": [
         {

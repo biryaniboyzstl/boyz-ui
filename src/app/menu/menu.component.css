@@ -132,3 +132,47 @@
   max-width: 600px;
   table-layout: auto;
 }
+
+
+/* Online-order banner */
+.order-banner {
+  background: linear-gradient(90deg, #FF416C 0%, #FF4B2B 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.order-banner h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.btn-order {
+  background-color: #fff;
+  color: #FF4B2B;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-order::after {
+  content: "→";
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.btn-order:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-decoration: none;
+}

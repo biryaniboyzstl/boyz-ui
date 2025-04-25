@@ -18,32 +18,35 @@ export class MenuComponent {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
-    const today = new Date();
-    const day = today.getDay(); // 0 = Sunday, 6 = Saturday
-    // Weekends (Saturday=6, Sunday=0) use $20.99; Weekdays use $15.99
-    this.buffetPrice = (day === 0 || day === 6) ? 20.99 : 15.99;
-    // Kids (12 and under) pay half of the adult buffet price.
-    this.kidsPrice = parseFloat((this.buffetPrice / 2).toFixed(2));
+ ngOnInit(): void {
+  const today = new Date();
+  const day = today.getDay(); // 0 = Sunday, …, 3 = Wednesday, …, 6 = Saturday
 
-    this.isWednesday = (day === 3);
-    this.isWeekendDinner = (day === 5 || day === 6 || day === 0); // Friday=5, Saturday=6, Sunday=0
+  this.buffetPrice    = (day === 0 || day === 6) ? 20.99 : 15.99;
+  this.kidsPrice      = parseFloat((this.buffetPrice / 2).toFixed(2));
+  this.isWednesday    = (day === 3);
+  this.isWeekendDinner= (day === 5 || day === 6 || day === 0);
 
+  this.http.get<any>('assets/menu.json').subscribe(data => {
+    // grab the raw menu
+    let loadedMenu: any[] = data.menu;
 
+    // if today is NOT Wednesday, strip out the Wednesday Biryani category
+    if (!this.isWednesday) {
+      loadedMenu = loadedMenu.filter(cat =>
+        cat.category !== 'WEDNESDAY BIRYANI SPECIALS'
+      );
+    }
 
-    this.http.get<any>('assets/menu.json').subscribe(data => {
-      // Assuming JSON structure: { "menu": [...] }
-      this.menu = data.menu;
-
-      // Add an expanded property to each category and subcategory for toggle functionality.
-      this.menu.forEach((category: any) => {
-        category.expanded = false;
-        if (category.subcategories) {
-          category.subcategories.forEach((sub: any) => {
-            sub.expanded = false;
-          });
-        }
-      });
+    // now assign & initialize your expand flags
+    this.menu = loadedMenu;
+    this.menu.forEach((category: any) => {
+      category.expanded = false;
+      if (category.subcategories) {
+        category.subcategories.forEach((sub: any) => sub.expanded = false);
+      }
     });
-  }
+  });
+}
+
 }
