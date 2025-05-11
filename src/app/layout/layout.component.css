@@ -1,0 +1,47 @@
+/* Services Section Wrapping */
+.services-section {
+  background-color: #fafafa;
+}
+
+/* Section Title */
+.services-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Individual Card */
+.service-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+}
+
+/* Icon */
+.service-icon {
+  font-size: 2.5rem;
+  color: #e07a5f;
+}
+
+/* Service Name */
+.service-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #293241;
+}
+
+/* Description */
+.service-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}

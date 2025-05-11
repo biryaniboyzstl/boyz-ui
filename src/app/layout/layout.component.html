@@ -1,39 +1,44 @@
 <!-- src/app/layout/layout.component.html -->
-<header class="bg-light py-2 shadow">
-  <div class="container d-flex justify-content-between align-items-center">
-    <!-- Logo -->
-    <a href="/" class="d-flex align-items-center text-decoration-none">
-      <img src="assets/logo.jpg" alt="Logo" class="logo me-3" style="width: 100px; height: auto;">
-    </a>
-    <!-- Navigation -->
-    <nav>
-      <ul class="d-flex list-unstyled m-0">
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="/home" routerLinkActive="active">Home</a>
-        </li>
-        <!-- Optional links -->
-        <!--
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="/about" routerLinkActive="active">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="/catering" routerLinkActive="active">Catering</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="/contact" routerLinkActive="active">Contact</a>
-        </li>
-        -->
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="/menu" routerLinkActive="active">Menu</a>
-        </li>
-        <!-- New Bakery Link -->
-        <li class="nav-item">
-          <a class="nav-link px-3" routerLink="/bakery" routerLinkActive="active">Bakery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link px-3" href="https://order.toasttab.com/online/biryani-boyz-4401-highway-k" target="_blank" rel="noopener noreferrer">Online Order</a>
-        </li>
-      </ul>
-    </nav>
+<!-- …header omitted for brevity… -->
+
+<!-- ===================================== -->
+<!-- Our Services Section -->
+<section class="services-section py-5">
+  <div class="container text-center">
+    <h2 class="services-title mb-4">Our Services</h2>
+    <div class="row justify-content-center">
+      <!-- Bakery first -->
+      <div class="col-12 col-sm-6 col-md-3 mb-4">
+        <div class="service-card p-4">
+          <i class="service-icon bi bi-shop mb-3"></i>
+          <h3 class="service-name">Bakery</h3>
+          <p class="service-desc">Freshly baked breads, pastries & cakes daily.</p>
+        </div>
+      </div>
+      <!-- Bar -->
+      <div class="col-12 col-sm-6 col-md-3 mb-4">
+        <div class="service-card p-4">
+          <i class="service-icon bi bi-cup-straw mb-3"></i>
+          <h3 class="service-name">Bar</h3>
+          <p class="service-desc">Refreshing drinks, handcrafted cocktails & more.</p>
+        </div>
+      </div>
+      <!-- Buffet -->
+      <div class="col-12 col-sm-6 col-md-3 mb-4">
+        <div class="service-card p-4">
+          <i class="service-icon bi bi-tray mb-3"></i>
+          <h3 class="service-name">Buffet</h3>
+          <p class="service-desc">All-you-can-eat spread with flavors from around the world.</p>
+        </div>
+      </div>
+      <!-- Catering -->
+      <div class="col-12 col-sm-6 col-md-3 mb-4">
+        <div class="service-card p-4">
+          <i class="service-icon bi bi-box-seam mb-3"></i>
+          <h3 class="service-name">Catering</h3>
+          <p class="service-desc">Custom menus for your events, big or small.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</header>
+</section>
