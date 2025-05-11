@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   kidsPrice!: number;
   isWednesday: boolean = false;
   isWeekendDinner: boolean = false;
+  isWeekend!: boolean;
 
 
   ngOnInit(): void {
@@ -24,6 +25,8 @@ export class HomeComponent implements OnInit {
     this.kidsPrice = parseFloat((this.buffetPrice / 2).toFixed(2));
     this.isWednesday = (day === 3);
     this.isWeekendDinner = (day === 5 || day === 6 || day === 0); // Friday=5, Saturday=6, Sunday=0
+
+    this.isWeekend = (day === 0 || day === 6);
 
   }
 }

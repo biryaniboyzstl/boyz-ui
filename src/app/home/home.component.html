@@ -12,8 +12,18 @@
 
 
 <section class="container text-center py-5">
+
+  <p class="fs-5 text-primary mb-3">
+    <strong>Buffet Hours:</strong>
+    <ng-container *ngIf="!isWeekend; else weekend">
+      Mon – Fri: 11:00 AM – 2:30 PM
+    </ng-container>
+    <ng-template #weekend>
+      Sat – Sun: 11:00 AM – 3:30 PM
+    </ng-template>
+  </p>
   <h2 class="text-danger">
-    <span *ngIf="buffetPrice === 20.99">Weekend Special Grand</span>
+    <span *ngIf="buffetPrice === 16.99">Weekend Special Grand</span>
     Buffet Price: ${{ buffetPrice }}<br>
     Kids (12 and Under): ${{ kidsPrice }}<br>
     Kids (7 and Under): FREE
