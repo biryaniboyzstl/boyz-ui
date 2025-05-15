@@ -13,28 +13,26 @@
 
 <section class="container text-center py-5">
 
-  <p class="fs-5 text-primary mb-3">
-    <strong>Buffet Hours:</strong>
-    <ng-container *ngIf="!isWeekend; else weekend">
-      Mon – Fri: 11:00 AM – 2:30 PM
-    </ng-container>
-    <ng-template #weekend>
-      Sat – Sun: 11:00 AM – 3:30 PM
-    </ng-template>
-  </p>
-  <h2 class="text-danger">
-    <span *ngIf="buffetPrice === 16.99">Weekend Special Grand</span>
-    Buffet Price: ${{ buffetPrice }}<br>
-    Kids (12 and Under): ${{ kidsPrice }}<br>
-    Kids (7 and Under): FREE
-  </h2>
-  <p class="lead text-muted">Embark on an Exquisite Indian Culinary Adventure!</p>
-
   <section class="container text-center py-5">
-    <p class="fst-italic text-danger">* Limited food availability during Happy Hours.</p>
     <div class="row justify-content-center">
       <img src="assets/thursday_05_15.jpeg" alt="Happy Hour Beer Fest" class="img-fluid rounded shadow-lg">
     </div>
+
+    <p class="fs-5 text-primary mb-3">
+      <strong>Buffet Hours:</strong>
+      <ng-container *ngIf="!isWeekend; else weekend">
+        Mon – Fri: 11:00 AM – 2:30 PM
+      </ng-container>
+      <ng-template #weekend>
+        Sat – Sun: 11:00 AM – 3:30 PM
+      </ng-template>
+    </p>
+    <h2 class="text-danger">
+      <span *ngIf="buffetPrice === 16.99">Weekend Special Grand</span>
+      Buffet Price: ${{ buffetPrice }}<br>
+      Kids (12 and Under): ${{ kidsPrice }}<br>
+      Kids (7 and Under): FREE
+    </h2>
 
   </section>
   <p class="fs-5">St. Louis, get ready for an extraordinary journey through authentic Indian cuisine right here in your own backyard! Discover the vibrant tastes of India featuring our signature Hyderabadi biryani, sizzling tandoori delicacies, and flavorful curries perfectly complemented by warm, fluffy naan. Whether you're in <strong>O'Fallon, Chesterfield, Maryland Heights, Wentzville, Lake St. Louis, St. Peters, St. Charles, Cottleville</strong>, or anywhere across the St. Louis region, come and savor the bold spices and rich flavors that truly capture the essence of Indian culinary tradition.</p>
