@@ -20,20 +20,12 @@
     </nav>
   </div>
 </header>
-<!-- ===================================== -->
-<!-- Our Services Section -->
-<!-- src/app/layout/layout.component.html -->
-<!-- …header omitted for brevity… -->
-<!-- ===================================== -->
-<!-- Our Services Section -->
-<!-- src/app/layout/layout.component.html -->
-<!-- …header omitted for brevity… -->
-<!-- ===================================== -->
-<!-- Our Services Section -->
-<!-- Independence Day Banner -->
-<section class="bg-primary text-white text-center py-2">
-  <strong>We will be closed on Mondays</strong>
+
+<!-- Closed-on-Monday banner: only show when it's Monday -->
+<section *ngIf="isMonday" class="bg-primary text-white text-center py-2">
+  <strong>We are closed on Mondays</strong>
 </section>
+
 <section class="container-fluid bg-danger text-white text-center py-3">
   <h2 class="fw-bold mb-2">
     <p class="lead">Order your favorite dishes from the comfort of your home.</p>
@@ -42,11 +34,12 @@
     Order Online
   </a>
 </section>
+
 <section class="services-section py-5">
   <div class="container text-center">
     <h2 class="services-title mb-4">Our Services</h2>
     <div class="row justify-content-center">
-      <!-- Bakery first -->
+      <!-- Bakery -->
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="service-card p-4">
           <i class="service-icon bi bi-shop mb-3"></i>
@@ -54,7 +47,6 @@
           <p class="service-desc">Freshly baked breads, pastries &amp; cakes daily.</p>
         </div>
       </div>
-      <!-- Bar -->
 
       <!-- Buffet -->
       <div class="col-12 col-sm-6 col-md-3 mb-4">
@@ -64,6 +56,7 @@
           <p class="service-desc">All-you-can-eat spread with flavors from around the world.</p>
         </div>
       </div>
+
       <!-- Catering -->
       <div class="col-12 col-sm-6 col-md-3 mb-4">
         <div class="service-card p-4">
