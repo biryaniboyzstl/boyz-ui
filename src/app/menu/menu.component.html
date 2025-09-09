@@ -1,107 +1,131 @@
-
-<section *ngIf="isWednesday" class="container text-center py-5">
-  <h1 class="display-4 fw-bold text-danger">Wednesday Biryani Night</h1>
-  <h2 class="text-danger">
-    Veg Biryani(Pulao): $9.99<br>
-    Paneer/Egg/Chicken Biryani(Pulao): $10.99
-  </h2>
-  <div class="mt-4">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <strong>Vegetable Biryani</strong>
-        <ul class="list-unstyled">
-          <li>Hyderabadi Vegetable Dum Biryani</li>
-          <li>Paneer Biryani</li>
-          <li>Pachi Mirchi Paneer Biryani</li>
-        </ul>
-      </li>
-      <li class="list-group-item">
-        <strong>Egg Biryani</strong>
-        <ul class="list-unstyled">
-          <li>BB Special Egg Biryani</li>
-        </ul>
-      </li>
-      <li class="list-group-item">
-        <strong>Chicken Biryani</strong>
-        <ul class="list-unstyled">
-          <li>Hyderabadi Chicken Dum Biryani</li>
-          <li>Chicken Fry Biryani</li>
-          <li>Chicken Keema Biryani</li>
-          <li>Pachi Mirchi Boneless Chicken Biryani</li>
-          <li>Chicken 65 Biryani</li>
-          <li>Pondu Mirchi Boneless Chicken Biryani</li>
-          <li>Vijayawada Boneless Chicken Biryani</li>
-        </ul>
-      </li>
-      <li class="list-group-item">
-        <strong>Shrimp & Goat Biryani</strong>
-        <ul class="list-unstyled">
-          <li>Shrimp Biryani</li>
-          <li>Goat Fry Biryani</li>
-        </ul>
-      </li>
-      <li class="list-group-item">
-        <strong>Pulao</strong>
-        <ul class="list-unstyled">
-          <li>Pachi Mirchi Paneer Pulao</li>
-          <li>BB Special Egg Pulao</li>
-          <li>Pachi Mirchi Boneless Chicken Pulao</li>
-          <li>Chicken Fry Pulao</li>
-          <li>Shrimp Pulao</li>
-          <li>Goat Fry Pulao</li>
-        </ul>
-      </li>
-      <li class="list-group-item">
-        <strong>Lamb Biryani</strong>
-        <ul class="list-unstyled">
-          <li>Lamb Biryani (Boneless)</li>
-        </ul>
-      </li>
-    </ul>
+<!-- Menu Hero Section -->
+<section class="menu-hero bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center py-5">
+      <div class="col-lg-8">
+        <h1 class="display-4 fw-bold mb-3">Our Menu</h1>
+        <p class="lead mb-0">Discover the authentic flavors of South India with our carefully crafted dishes</p>
+      </div>
+    </div>
   </div>
 </section>
-<div class="menu">
-  <!-- Soft Launch Note -->
 
-
-  <div *ngFor="let category of menu" class="category">
-    <!-- Category header: clickable to toggle expansion -->
-    <h2 class="category-header" (click)="category.expanded = !category.expanded">
-      {{ category.category }}
-      <span class="toggle-icon">{{ category.expanded ? '−' : '+' }}</span>
-    </h2>
-
-    <!-- Show category items if expanded -->
-    <div *ngIf="category.expanded">
-      <!-- Direct items under the category -->
-      <div *ngIf="category.items && category.items.length > 0">
-        <div *ngFor="let item of category.items" class="menu-item">
-          <h4>{{ item.name }} - {{ item.price }}</h4>
-          <p>
-            {{ item.description }} <span class="item-type">({{ item.type }})</span>
-          </p>
+<!-- Wednesday Biryani Special -->
+<section *ngIf="isWednesday" class="bg-warning text-dark py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-3">
+          <i class="fas fa-calendar-day me-2"></i>
+          Wednesday Biryani Special
+        </h2>
+        <p class="lead mb-0">Every Wednesday, enjoy our special biryani collection at amazing prices!</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <div class="pricing-highlight">
+          <div class="h4 fw-bold">Veg Biryani: $9.99</div>
+          <div class="h4 fw-bold">Non-Veg Biryani: $10.99</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Subcategories (if any) -->
-      <div *ngIf="category.subcategories && category.subcategories.length > 0">
-        <div *ngFor="let sub of category.subcategories" class="subcategory">
-          <h3 class="subcategory-header" (click)="sub.expanded = !sub.expanded">
-            {{ sub.subcategory }}
-            <span class="toggle-icon">{{ sub.expanded ? '−' : '+' }}</span>
-          </h3>
-          <!-- Optional note -->
-          <p *ngIf="sub.note" class="sub-note">{{ sub.note }}</p>
-          <div *ngIf="sub.expanded">
-            <div *ngFor="let item of sub.items" class="menu-item">
-              <h4>{{ item.name }} - {{ item.price }}</h4>
-              <p>
-                {{ item.description }} <span class="item-type">({{ item.type }})</span>
-              </p>
+<!-- Menu Categories -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <!-- Menu Navigation -->
+        <div class="menu-nav sticky-top" style="top: 100px;">
+          <h5 class="text-primary fw-bold mb-3">Menu Categories</h5>
+          <nav class="nav flex-column">
+            <a *ngFor="let category of menu; let i = index" 
+               class="nav-link menu-nav-link" 
+               (click)="scrollToCategory(category.category, i)"
+               [class.active]="activeCategory === i">
+              <i class="fas fa-chevron-right me-2"></i>
+              {{ category.category }}
+            </a>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="col-lg-9">
+        <!-- Menu Items -->
+        <div class="menu-content">
+          <div *ngFor="let category of menu; let i = index" 
+               class="menu-category mb-5" 
+               [id]="'category-' + i">
+            
+            <!-- Category Header -->
+            <div class="category-header" (click)="toggleCategory(i)">
+              <h2 class="category-title">
+                <i class="fas fa-utensils me-3"></i>
+                {{ category.category }}
+                <span class="toggle-icon float-end">
+                  <i class="fas" [class.fa-chevron-down]="!category.expanded" [class.fa-chevron-up]="category.expanded"></i>
+                </span>
+              </h2>
+            </div>
+
+            <!-- Category Items -->
+            <div *ngIf="category.expanded" class="category-content">
+              <!-- Direct Items -->
+              <div *ngIf="category.items && category.items.length > 0" class="menu-items">
+                <div *ngFor="let item of category.items" class="menu-item">
+                  <div class="row align-items-center">
+                    <div class="col-md-8">
+                      <h5 class="item-name">{{ item.name }}</h5>
+                      <p class="item-description">{{ item.description }}</p>
+                      <span class="item-type badge" [ngClass]="getItemTypeClass(item.type)">
+                        {{ item.type }}
+                      </span>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                      <div class="item-price">{{ item.price }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subcategories -->
+              <div *ngIf="category.subcategories && category.subcategories.length > 0" class="subcategories">
+                <div *ngFor="let subcategory of category.subcategories" class="subcategory mb-4">
+                  <h4 class="subcategory-title" (click)="toggleSubcategory(category, subcategory)">
+                    {{ subcategory.subcategory }}
+                    <span class="toggle-icon float-end">
+                      <i class="fas" [class.fa-chevron-down]="!subcategory.expanded" [class.fa-chevron-up]="subcategory.expanded"></i>
+                    </span>
+                  </h4>
+                  
+                  <p *ngIf="subcategory.note" class="subcategory-note text-muted">
+                    <i class="fas fa-info-circle me-2"></i>
+                    {{ subcategory.note }}
+                  </p>
+
+                  <div *ngIf="subcategory.expanded && subcategory.items" class="subcategory-items">
+                    <div *ngFor="let item of subcategory.items" class="menu-item">
+                      <div class="row align-items-center">
+                        <div class="col-md-8">
+                          <h5 class="item-name">{{ item.name }}</h5>
+                          <p class="item-description">{{ item.description }}</p>
+                          <span class="item-type badge" [ngClass]="getItemTypeClass(item.type)">
+                            {{ item.type }}
+                          </span>
+                        </div>
+                        <div class="col-md-4 text-md-end">
+                          <div class="item-price">{{ item.price }}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
