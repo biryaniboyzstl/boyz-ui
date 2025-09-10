@@ -11,30 +11,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class MenuComponent implements OnInit {
   menu: any[] = [];
-  isWednesday: boolean = false;
   activeCategory: number = 0;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    const today = new Date();
-    const day = today.getDay(); // 0 = Sunday, …, 3 = Wednesday, …, 6 = Saturday
-
-    this.isWednesday = (day === 3);
-
     this.http.get<any>('assets/menu.json').subscribe(data => {
-      // grab the raw menu
-      let loadedMenu: any[] = data.menu;
+      // Load the menu data
+      this.menu = data.menu;
 
-      // if today is NOT Wednesday, strip out the Wednesday Biryani category
-      if (!this.isWednesday) {
-        loadedMenu = loadedMenu.filter(cat =>
-          cat.category !== 'WEDNESDAY BIRYANI SPECIALS'
-        );
-      }
-
-      // now assign & initialize your expand flags
-      this.menu = loadedMenu;
+      // Initialize expand flags
       this.menu.forEach((category: any) => {
         category.expanded = false;
         if (category.subcategories) {
@@ -87,14 +73,14 @@ export class MenuComponent implements OnInit {
     // Update active category based on scroll position
     const categories = document.querySelectorAll('.menu-category');
     let current = '';
-    
+
     categories.forEach((category, index) => {
       const rect = category.getBoundingClientRect();
       if (rect.top <= 100) {
         current = index.toString();
       }
     });
-    
+
     if (current) {
       this.activeCategory = parseInt(current);
     }

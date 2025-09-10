@@ -41,7 +41,19 @@
     <div class="row align-items-center">
       <div class="col-md-8 mx-auto">
         <i class="fas fa-utensils me-2"></i>
-        <strong>Thalis - Dine In Only</strong> - Fresh, made-to-order thalis served at lunch time
+        <strong>Thalis - Dine In Only</strong> - Fresh, made-to-order thalis served Tuesday-Friday at lunch time
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Weekend Thali Notice -->
+<section *ngIf="!isWeekday" class="bg-danger text-white py-3">
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col-md-8 mx-auto">
+        <i class="fas fa-calendar-times me-2"></i>
+        <strong>Thalis Not Available Today</strong> - Thalis are only served Tuesday-Friday at lunch time
       </div>
     </div>
   </div>
@@ -52,7 +64,7 @@
   <div class="container">
     <div class="section-title">
       <h2>Our Signature Thalis</h2>
-      <p>Fresh, wholesome, and flavorful South Indian thalis served daily with traditional accompaniments</p>
+      <p>Fresh, wholesome, and flavorful South Indian thalis served Tuesday-Friday with traditional accompaniments</p>
     </div>
 
     <div class="row g-4">
@@ -182,14 +194,6 @@
         <div class="hours-info">
           <div class="row mb-3">
             <div class="col-4">
-              <strong class="text-dark">Monday</strong>
-            </div>
-            <div class="col-8">
-              <span class="text-danger">Closed</span>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-4">
               <strong class="text-dark">Tuesday</strong>
             </div>
             <div class="col-8">
@@ -220,26 +224,10 @@
               <span class="text-success">11:00 AM - 2:30 PM</span>
             </div>
           </div>
-          <div class="row mb-3">
-            <div class="col-4">
-              <strong class="text-dark">Saturday</strong>
-            </div>
-            <div class="col-8">
-              <span class="text-success">11:00 AM - 3:00 PM</span>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-4">
-              <strong class="text-dark">Sunday</strong>
-            </div>
-            <div class="col-8">
-              <span class="text-success">11:00 AM - 3:00 PM</span>
-            </div>
-          </div>
         </div>
         <div class="alert alert-info mt-4">
           <i class="fas fa-utensils me-2"></i>
-          <strong>Thalis - Dine In Only</strong> - Fresh, made-to-order thalis served at lunch time
+          <strong>Thalis - Dine In Only</strong> - Fresh, made-to-order thalis served Tuesday-Friday at lunch time
         </div>
       </div>
       <div class="col-lg-6">

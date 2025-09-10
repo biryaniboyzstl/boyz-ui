@@ -15,11 +15,12 @@ export class HomeComponent implements OnInit {
   chickenThaliPrice: number = 13.99;
   muttonThaliPrice: number = 14.99;
   
-  isWeekend!: boolean;
+  isWeekday!: boolean;
 
   ngOnInit(): void {
     const today = new Date();
     const day = today.getDay(); // 0 = Sunday, 6 = Saturday
-    this.isWeekend = (day === 0 || day === 6);
+    // Thalis are only available Tuesday-Friday (day 2-5)
+    this.isWeekday = (day >= 2 && day <= 5);
   }
 }
