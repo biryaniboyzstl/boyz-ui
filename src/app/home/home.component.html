@@ -1,3 +1,62 @@
+<!-- Weekend Buffet Section - Above Hero Banner -->
+<section *ngIf="isWeekend" class="section bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Weekend Buffet Specials</h2>
+      <p>All-you-can-eat buffet featuring our signature dishes served Saturday & Sunday 11 AM - 3 PM</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- Weekend Buffet -->
+      <div class="col-lg-8 col-md-10">
+        <div class="card h-100 card-hover">
+          <div class="position-relative">
+            <img src="assets/buffet_sample.png" alt="Weekend Buffet" class="card-img-top">
+            <div class="position-absolute top-0 end-0 m-3">
+              <span class="badge bg-success fs-6">Weekend Special</span>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <h4 class="card-title text-primary fw-bold">Weekend Buffet</h4>
+            <p class="card-text text-muted mb-4">
+              All-you-can-eat buffet featuring our signature dishes including 
+              curries, biryanis, dosas, and desserts. Vegetarian and non-vegetarian options available.
+            </p>
+            <div class="pricing mb-4">
+              <div class="row">
+                <div class="col-6">
+                  <div class="h4 text-primary fw-bold mb-1">Adults</div>
+                  <div class="h3 text-primary fw-bold">$19.99</div>
+                </div>
+                <div class="col-6">
+                  <div class="h4 text-primary fw-bold mb-1">Kids</div>
+                  <div class="h3 text-primary fw-bold">$9.99</div>
+                </div>
+              </div>
+            </div>
+            <div class="thali-features">
+              <div class="row text-center">
+                <div class="col-4">
+                  <i class="fas fa-utensils text-info mb-2"></i>
+                  <small class="d-block text-muted">All-You-Can-Eat</small>
+                </div>
+                <div class="col-4">
+                  <i class="fas fa-leaf text-success mb-2"></i>
+                  <small class="d-block text-muted">Fresh</small>
+                </div>
+                <div class="col-4">
+                  <i class="fas fa-heart text-danger mb-2"></i>
+                  <small class="d-block text-muted">Delicious</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
@@ -10,11 +69,17 @@
           <h2 class="h3 text-white-50 mb-4 fade-in-up">
             Authentic South Indian Cuisine
           </h2>
-          <p class="lead text-white-50 mb-5 fade-in-up">
+          <p class="lead text-white-50 mb-5 fade-in-up" *ngIf="!isWeekend">
             Experience the rich flavors of South India with our traditional recipes, 
             fresh ingredients, and warm hospitality. From aromatic biryanis to 
             flavorful thalis, we bring you authentic taste that transports you 
             to the streets of Chennai, Bangalore, and Hyderabad.
+          </p>
+          <p class="lead text-white-50 mb-5 fade-in-up" *ngIf="isWeekend">
+            Experience the rich flavors of South India with our traditional recipes, 
+            fresh ingredients, and warm hospitality. Join us for our weekend buffet 
+            featuring authentic taste that transports you to the streets of Chennai, 
+            Bangalore, and Hyderabad.
           </p>
           <div class="hero-buttons fade-in-up">
             <a routerLink="/menu" class="btn btn-warning btn-lg me-3 mb-3">
@@ -28,15 +93,28 @@
       </div>
       <div class="col-lg-6">
         <div class="hero-image text-center">
-          <img src="assets/thali.png" alt="South Indian Thali" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
+          <img *ngIf="!isWeekend" src="assets/thali.png" alt="South Indian Thali" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
+          <img *ngIf="isWeekend" src="assets/buffet_sample.png" alt="Weekend Buffet" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Thali Dine In Only Alert -->
-<section class="bg-warning text-dark py-3">
+<!-- Weekend Buffet Alert -->
+<section *ngIf="isWeekend" class="bg-success text-white py-3">
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col-md-8 mx-auto">
+        <i class="fas fa-utensils me-2"></i>
+        <strong>Weekend Buffet Available!</strong> - All-you-can-eat buffet served Saturday & Sunday 11 AM - 3 PM
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Weekday Thali Alert -->
+<section *ngIf="isWeekday" class="bg-warning text-dark py-3">
   <div class="container text-center">
     <div class="row align-items-center">
       <div class="col-md-8 mx-auto">
@@ -47,20 +125,20 @@
   </div>
 </section>
 
-<!-- Weekend Thali Notice -->
-<section *ngIf="!isWeekday" class="bg-danger text-white py-3">
+<!-- Monday Notice -->
+<section *ngIf="!isWeekday && !isWeekend" class="bg-danger text-white py-3">
   <div class="container text-center">
     <div class="row align-items-center">
       <div class="col-md-8 mx-auto">
         <i class="fas fa-calendar-times me-2"></i>
-        <strong>Thalis Not Available Today</strong> - Thalis are only served Tuesday-Friday at lunch time
+        <strong>Monday - Regular Menu Only</strong> - Thalis available Tuesday-Friday, Buffets available Saturday-Sunday
       </div>
     </div>
   </div>
 </section>
 
-<!-- Signature Thalis Section -->
-<section class="section bg-light">
+<!-- Weekday Thali Section -->
+<section *ngIf="isWeekday" class="section bg-light">
   <div class="container">
     <div class="section-title">
       <h2>Our Signature Thalis</h2>
@@ -190,44 +268,83 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6">
-        <h2 class="text-primary fw-bold mb-4">Thali Hours (Lunch Time)</h2>
-        <div class="hours-info">
-          <div class="row mb-3">
-            <div class="col-4">
-              <strong class="text-dark">Tuesday</strong>
+        <!-- Weekend Buffet Hours -->
+        <div *ngIf="isWeekend">
+          <h2 class="text-primary fw-bold mb-4">Weekend Buffet Hours</h2>
+          <div class="hours-info">
+            <div class="row mb-3">
+              <div class="col-4">
+                <strong class="text-dark">Saturday</strong>
+              </div>
+              <div class="col-8">
+                <span class="text-success">11:00 AM - 3:00 PM</span>
+              </div>
             </div>
-            <div class="col-8">
-              <span class="text-success">11:00 AM - 2:30 PM</span>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-4">
-              <strong class="text-dark">Wednesday</strong>
-            </div>
-            <div class="col-8">
-              <span class="text-success">11:00 AM - 2:30 PM</span>
-            </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col-4">
-              <strong class="text-dark">Thursday</strong>
-            </div>
-            <div class="col-8">
-              <span class="text-success">11:00 AM - 2:30 PM</span>
+            <div class="row mb-3">
+              <div class="col-4">
+                <strong class="text-dark">Sunday</strong>
+              </div>
+              <div class="col-8">
+                <span class="text-success">11:00 AM - 3:00 PM</span>
+              </div>
             </div>
           </div>
-          <div class="row mb-3">
-            <div class="col-4">
-              <strong class="text-dark">Friday</strong>
-            </div>
-            <div class="col-8">
-              <span class="text-success">11:00 AM - 2:30 PM</span>
-            </div>
+          <div class="alert alert-success mt-4">
+            <i class="fas fa-utensils me-2"></i>
+            <strong>Weekend Buffet Available!</strong> - All-you-can-eat buffet served Saturday & Sunday 11 AM - 3 PM
           </div>
         </div>
-        <div class="alert alert-info mt-4">
-          <i class="fas fa-utensils me-2"></i>
-          <strong>Thalis - Dine In Only</strong> - Fresh, made-to-order thalis served Tuesday-Friday at lunch time
+
+        <!-- Weekday Thali Hours -->
+        <div *ngIf="isWeekday">
+          <h2 class="text-primary fw-bold mb-4">Thali Hours (Lunch Time)</h2>
+          <div class="hours-info">
+            <div class="row mb-3">
+              <div class="col-4">
+                <strong class="text-dark">Tuesday</strong>
+              </div>
+              <div class="col-8">
+                <span class="text-success">11:00 AM - 2:30 PM</span>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-4">
+                <strong class="text-dark">Wednesday</strong>
+              </div>
+              <div class="col-8">
+                <span class="text-success">11:00 AM - 2:30 PM</span>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-4">
+                <strong class="text-dark">Thursday</strong>
+              </div>
+              <div class="col-8">
+                <span class="text-success">11:00 AM - 2:30 PM</span>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-4">
+                <strong class="text-dark">Friday</strong>
+              </div>
+              <div class="col-8">
+                <span class="text-success">11:00 AM - 2:30 PM</span>
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-info mt-4">
+            <i class="fas fa-utensils me-2"></i>
+            <strong>Thalis - Dine In Only</strong> - Fresh, made-to-order thalis served Tuesday-Friday at lunch time
+          </div>
+        </div>
+
+        <!-- Monday Notice -->
+        <div *ngIf="!isWeekday && !isWeekend">
+          <h2 class="text-primary fw-bold mb-4">Special Hours</h2>
+          <div class="alert alert-warning mt-4">
+            <i class="fas fa-calendar-times me-2"></i>
+            <strong>Monday - Regular Menu Only</strong> - Thalis available Tuesday-Friday, Buffets available Saturday-Sunday
+          </div>
         </div>
       </div>
       <div class="col-lg-6">

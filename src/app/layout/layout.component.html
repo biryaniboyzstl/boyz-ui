@@ -38,6 +38,12 @@
             <i class="fas fa-birthday-cake me-1"></i>Catering
           </a>
         </li>
+        <!-- Bar link temporarily hidden -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/bar" routerLinkActive="active">
+            <i class="fas fa-beer me-1"></i>Bar
+          </a>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link px-3"
              href="https://order.toasttab.com/online/biryani-boyz-4401-highway-k"
@@ -55,11 +61,21 @@
   </div>
 </nav>
 
-<!-- Thali Dine In Only Banner -->
-<div *ngIf="!isMonday" class="bg-warning text-dark text-center py-2">
+<!-- Weekend Buffet Banner -->
+<div *ngIf="isWeekend" class="bg-success text-white text-center py-2">
   <div class="container">
     <i class="fas fa-utensils me-2"></i>
-    <strong>Thalis - Dine In Only</strong> - Fresh thalis served at lunch time |
+    <strong>Weekend Buffet Available!</strong> - All-you-can-eat buffet Saturday & Sunday 11 AM - 3 PM |
+    <i class="fas fa-shopping-cart me-1"></i>
+    <strong>Online Ordering Available</strong> for other menu items
+  </div>
+</div>
+
+<!-- Weekday Thali Banner -->
+<div *ngIf="isWeekday" class="bg-warning text-dark text-center py-2">
+  <div class="container">
+    <i class="fas fa-utensils me-2"></i>
+    <strong>Thalis - Dine In Only</strong> - Fresh thalis served Tuesday-Friday at lunch time |
     <i class="fas fa-shopping-cart me-1"></i>
     <strong>Online Ordering Available</strong> for other menu items
   </div>
