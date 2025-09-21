@@ -15,10 +15,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navigation Menu -->
+    <!-- Navigation Menu - Hidden for Maintenance -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
+        <!-- All navigation links hidden for maintenance -->
+        <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
             <i class="fas fa-home me-1"></i>Home
           </a>
@@ -38,12 +39,6 @@
             <i class="fas fa-birthday-cake me-1"></i>Catering
           </a>
         </li>
-        <!-- Bar link temporarily hidden -->
-        <!-- <li class="nav-item">
-          <a class="nav-link" routerLink="/bar" routerLinkActive="active">
-            <i class="fas fa-beer me-1"></i>Bar
-          </a>
-        </li> -->
         <li class="nav-item">
           <a class="nav-link px-3"
              href="https://order.toasttab.com/online/biryani-boyz-4401-highway-k"
@@ -55,139 +50,16 @@
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">
             <i class="fas fa-phone me-1"></i>Contact
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Weekend Buffet Banner -->
-<div *ngIf="isWeekend" class="bg-success text-white text-center py-2">
-  <div class="container">
-    <i class="fas fa-utensils me-2"></i>
-    <strong>Weekend Buffet Available!</strong> - All-you-can-eat buffet Saturday & Sunday 11 AM - 3 PM |
-    <i class="fas fa-shopping-cart me-1"></i>
-    <strong>Online Ordering Available</strong> for other menu items
-  </div>
-</div>
-
-<!-- Weekday Thali Banner -->
-<div *ngIf="isWeekday" class="bg-warning text-dark text-center py-2">
-  <div class="container">
-    <i class="fas fa-utensils me-2"></i>
-    <strong>Thalis - Dine In Only</strong> - Fresh thalis served Tuesday-Friday at lunch time |
-    <i class="fas fa-shopping-cart me-1"></i>
-    <strong>Online Ordering Available</strong> for other menu items
-  </div>
-</div>
-
-<!-- Closed on Monday Banner -->
-<div *ngIf="isMonday" class="bg-danger text-white text-center py-2">
-  <div class="container">
-    <i class="fas fa-calendar-times me-2"></i>
-    <strong>We are closed on Mondays</strong> - We'll be back tomorrow with fresh flavors!
-  </div>
-</div>
+<!-- All banners removed for maintenance -->
 
 <main class="main-content">
   <router-outlet></router-outlet>
 </main>
 
-<!-- Professional Footer -->
-<footer class="footer bg-dark text-white">
-  <div class="container">
-    <div class="row g-4">
-      <!-- Restaurant Info -->
-      <div class="col-lg-4 col-md-6">
-        <div class="footer-brand mb-4">
-          <img src="assets/logo.jpg" alt="Biryani Boyz Logo" class="me-3 mb-3" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-          <h5 class="text-white mb-2">Biryani Boyz</h5>
-          <p class="text-light mb-0">Authentic South Indian Cuisine</p>
-        </div>
-        <p class="text-light">
-          Experience the rich flavors of South India with our traditional recipes, fresh ingredients, and warm hospitality.
-        </p>
-        <div class="social-links mt-3">
-          <a href="https://www.facebook.com/profile.php?id=61569225116924" target="_blank" class="btn btn-outline-light btn-sm me-2">
-            <i class="fab fa-facebook-f me-1"></i>Facebook
-          </a>
-          <a href="https://instagram.com/biryaniboyzstl" target="_blank" class="btn btn-outline-light btn-sm me-2">
-            <i class="fab fa-instagram me-1"></i>Instagram
-          </a>
-          <a href="https://wa.me/16363853676" target="_blank" class="btn btn-outline-light btn-sm">
-            <i class="fab fa-whatsapp me-1"></i>WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <!-- Hours -->
-      <div class="col-lg-4 col-md-6">
-        <h5 class="text-white mb-3">Restaurant Hours</h5>
-        <div class="hours-list">
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Sunday</span>
-            <span class="text-light">11:00 AM – 3:00 PM | 4:30 PM – 9:30 PM</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Monday</span>
-            <span class="text-warning">Closed</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Tuesday</span>
-            <span class="text-light">11:00 AM – 2:30 PM | 4:30 PM – 9:30 PM</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Wednesday</span>
-            <span class="text-light">11:00 AM – 2:30 PM | 4:30 PM – 9:30 PM</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Thursday</span>
-            <span class="text-light">11:00 AM – 2:30 PM | 4:30 PM – 9:30 PM</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Friday</span>
-            <span class="text-light">11:00 AM – 2:30 PM | 4:30 PM – 10:30 PM</span>
-          </div>
-          <div class="d-flex justify-content-between mb-2">
-            <span class="text-light fw-bold">Saturday</span>
-            <span class="text-light">11:00 AM – 3:00 PM | 4:30 PM – 10:30 PM</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="col-lg-4 col-md-6">
-        <h5 class="text-white mb-3">Contact Info</h5>
-        <div class="contact-info">
-          <div class="mb-3">
-            <i class="fas fa-map-marker-alt text-primary me-2"></i>
-            <span class="text-light">4401 Highway K, O'Fallon, MO 63368</span>
-          </div>
-          <div class="mb-3">
-            <i class="fas fa-phone text-primary me-2"></i>
-            <a href="tel:+16364776077" class="text-light">(636) 477-6077</a>
-          </div>
-          <div class="mb-3">
-            <i class="fas fa-phone text-primary me-2"></i>
-            <a href="tel:+16366813189" class="text-light">(636) 681-3189</a>
-          </div>
-          <div class="mb-3">
-            <i class="fab fa-whatsapp text-primary me-2"></i>
-            <a href="https://wa.me/16363853676" target="_blank" class="text-light">WhatsApp: (636) 385-3676</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <hr class="my-4" style="border-color: #374151;">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <p class="text-light mb-0">&copy; 2025 Biryani Boyz. All rights reserved.</p>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <small class="text-muted">Made with ❤️ for food lovers</small>
-      </div>
-    </div>
-  </div>
-</footer>
+<!-- Footer removed for maintenance -->
